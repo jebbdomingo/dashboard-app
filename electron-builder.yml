@@ -11,3 +11,8 @@ win:
 
 linux:
   target: [deb, rpm, tar.gz]
+
+publish:
+  - provider: github
+    owner: jebbdomingo
+    repo: dashboard-app

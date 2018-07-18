@@ -16,38 +16,6 @@
   "keywords": [],
   "author": "Jebb Domingo <jebb@timble.net>",
   "license": "MIT",
-  "config": {
-    "forge": {
-      "make_targets": {
-        "win32": [
-          "squirrel"
-        ],
-        "darwin": [
-          "zip"
-        ],
-        "linux": [
-          "deb",
-          "rpm"
-        ]
-      },
-      "electronPackagerConfig": {
-        "packageManager": "npm"
-      },
-      "electronWinstallerConfig": {
-        "name": "electron"
-      },
-      "electronInstallerDebian": {},
-      "electronInstallerRedhat": {},
-      "github_repository": {
-        "owner": "jebbdomingo",
-        "name": "Jebb Domingo"
-      },
-      "windowsStoreConfig": {
-        "packageName": "",
-        "name": "electron"
-      }
-    }
-  },
   "dependencies": {
     "electron-compile": "^6.4.3",
     "electron-devtools-installer": "^2.2.4",
@@ -63,12 +31,5 @@
     "electron-builder": "^20.11.1",
     "electron-forge": "^5.2.2",
     "electron-prebuilt-compile": "2.0.3"
-  },
-  "build": {
-     "publish": [{
-         "provider": "github",
-         "owner": "jebbdomingo",
-         "repo": "dashboard.joomlatools.com"
-     }]
   }
 }
