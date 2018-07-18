@@ -4,7 +4,7 @@ productName: "Joomlatools Dashboard"
 
 mac:
   category: "public.app-category.developer-tools"
-  target: dmg
+  target: [dmg, zip]
 
 win:
   target: nsis
