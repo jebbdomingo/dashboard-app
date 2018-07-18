@@ -1,0 +1,74 @@
+{
+  "name": "joomlatools-dashboard-app",
+  "productName": "Joomlatools Dashboard",
+  "homepage": "https://www.joomlatools.com",
+  "version": "1.0.0",
+  "description": "Joomlatools dashboard desktop app",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\"",
+    "dist": "electron-builder"
+  },
+  "keywords": [],
+  "author": "Jebb Domingo <jebb@timble.net>",
+  "license": "MIT",
+  "config": {
+    "forge": {
+      "make_targets": {
+        "win32": [
+          "squirrel"
+        ],
+        "darwin": [
+          "zip"
+        ],
+        "linux": [
+          "deb",
+          "rpm"
+        ]
+      },
+      "electronPackagerConfig": {
+        "packageManager": "npm"
+      },
+      "electronWinstallerConfig": {
+        "name": "electron"
+      },
+      "electronInstallerDebian": {},
+      "electronInstallerRedhat": {},
+      "github_repository": {
+        "owner": "jebbdomingo",
+        "name": "Jebb Domingo"
+      },
+      "windowsStoreConfig": {
+        "packageName": "",
+        "name": "electron"
+      }
+    }
+  },
+  "dependencies": {
+    "electron-compile": "^6.4.3",
+    "electron-devtools-installer": "^2.2.4",
+    "electron-log": "^2.2.16",
+    "electron-squirrel-startup": "^1.0.0",
+    "electron-updater": "^3.0.1",
+    "vue": "^2.5.16"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "electron-builder": "^20.11.1",
+    "electron-forge": "^5.2.2",
+    "electron-prebuilt-compile": "2.0.3"
+  },
+  "build": {
+     "publish": [{
+         "provider": "github",
+         "owner": "jebbdomingo",
+         "repo": "dashboard.joomlatools.com"
+     }]
+  }
+}
