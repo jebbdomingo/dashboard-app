@@ -2,7 +2,7 @@
   "name": "joomlatools-dashboard-app",
   "productName": "Joomlatools Dashboard",
   "homepage": "https://www.joomlatools.com",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Joomlatools dashboard desktop app",
   "main": "src/index.js",
   "scripts": {
