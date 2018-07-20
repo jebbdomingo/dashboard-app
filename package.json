@@ -2,7 +2,7 @@
   "name": "joomlatools-dashboard-app",
   "productName": "Joomlatools Dashboard",
   "homepage": "https://www.joomlatools.com",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Joomlatools dashboard desktop app",
   "main": "src/index.js",
   "scripts": {
@@ -14,8 +14,8 @@
     "dist": "electron-builder"
   },
   "keywords": [],
-  "author": "Jebb Domingo <jebb@timble.net>",
-  "license": "MIT",
+  "author": "Timble <info@timble.net>",
+  "license": "GNU GPLv3",
   "dependencies": {
     "electron-compile": "^6.4.3",
     "electron-devtools-installer": "^2.2.4",
