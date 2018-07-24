@@ -11,26 +11,24 @@ const { autoUpdater } = require('electron-updater')
 let updater
 
 autoUpdater.on('error', (error) => {
-    dialog.showErrorBox('Error: ', error == null ? "unknown" : (error.stack || error).toString())
+    dialog.showErrorBox('Error in auto-updater: ', error == null ? "unknown" : (error.stack || error).toString())
+})
+
+autoUpdater.on('update-not-available', () => {
+    dialog.showMessageBox({
+        title: 'No Updates',
+        message: 'Current version is up-to-date.'
+    })
+    
+    updater.enabled = true
+    updater = null
 })
 
 // export this to MenuItem click callback
 function checkForUpdates (menuItem, focusedWindow, event) {
     updater         = menuItem
     updater.enabled = false
-
-    dialog.showMessageBox({
-        type: 'info',
-        title: 'Check for updates',
-        message: 'Do you want to check for updates now?',
-        buttons: ['Sure', 'No']
-    }, (buttonIndex) => {
-        if (buttonIndex === 0) {
-            autoUpdater.checkForUpdates()
-        } else {
-            updater.enabled = true
-            updater = null
-        }
-    })
+    autoUpdater.checkForUpdates()
 }
+
 module.exports.checkForUpdates = checkForUpdates
